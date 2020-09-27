@@ -19,7 +19,7 @@ export default function Table() {
                   key={name}
                   // style={{ width }}
                   onClick={() => {
-                    context.handleSort(name.toLowerCase());
+                    context.handleSorting(name.toLowerCase());
                   }}
                 >
                   {name}

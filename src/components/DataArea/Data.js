@@ -11,7 +11,6 @@ const DataArea = () => {
     order: "ascend",
     userFilter: [],
     headings: [
-      { name: "Image" },
       { name: "Name" },
       { name: "Phone" },
       { name: "Email" },
@@ -84,7 +83,7 @@ const DataArea = () => {
         userFilter: results.data.results
       });
     });
-  }, []);
+  },);
 
   return (
     <DataContext.Provider value={{ devState, handleSearch, handleSorting }}>
