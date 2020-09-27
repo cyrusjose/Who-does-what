@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import API from "../../utils/API";
 import "./Data.css";
 import DataContext from "../../utils/DataContext";
-import Nav from "../Nav";
-import Table from "../Table";
+import Nav from "../Nav/Nav";
+import Table from "../Table/Table";
 
-export default function Data() {
+const Data = ()=> {
   const [devState, setDevState] = useState({
     users: [],
     order: "ascend",
@@ -96,3 +96,5 @@ export default function Data() {
     </DataContext.Provider>
   );
 }
+
+export default Data;

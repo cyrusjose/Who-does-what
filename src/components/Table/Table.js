@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import TableBody from "../TableBody";
 import "./Table.css";
 import DataContext from "../../utils/DataContext";
 import Body from "../TableBody/Body";
@@ -12,7 +11,23 @@ export default function Table() {
       <table>
         {/* Table Header */}
         <thead>
-          <tr></tr>
+          <tr>
+            {context.devState.headings.map(({ name }) => {
+              return (
+                <th
+                  className="col"
+                  key={name}
+                  // style={{ width }}
+                  onClick={() => {
+                    context.handleSort(name.toLowerCase());
+                  }}
+                >
+                  {name}
+                  <span className="pointer"></span>
+                </th>
+              );
+            })}
+          </tr>
         </thead>
         {/* Table Body */}
         <Body />
