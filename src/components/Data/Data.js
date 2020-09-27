@@ -1,35 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import API from "../../utils/API";
 import "./Data.css";
+import DataContext from "../../utils/DataContext";
+import Nav from "../Nav";
+import Table from "../Table";
 
 export default function Data() {
-  const [users, setUsers] = useState([]);
-  const [order, setOrder] = useState("ascend");
-  const [userFilter, setUserFilter] = useState([]);
-  const [headings, setHeadings] = useState([
-    {
-      name: "Name"
-    },
-    {
-      name: "Phone"
-    },
-    {
-      name: "Email"
-    },
-    {
-      name: "DOB"
-    }
-  ]);
+  const [devState, setDevState] = useState({
+    users: [],
+    order: "ascend",
+    userFilter: [],
+    headings: [
+      { name: "Image" },
+      { name: "Name" },
+      { name: "Phone" },
+      { name: "Email" },
+      { name: "DOB" }
+    ]
+  });
 
   const handleSorting = heading => {
-    if (order === "descend") {
-      setOrder("ascend");
+    if (devState.order === "descend") {
+      setDevState("ascend");
     } else {
-      setOrder("descend");
+      setDevState("descend");
     }
 
     const comparison = (a, b) => {
-      if (order === "ascend") {
+      if (devState.order === "ascend") {
         if (a[heading] === undefined) {
           // Place heading last
           return 1;
@@ -56,9 +54,45 @@ export default function Data() {
       }
     };
 
-    const userSort = userFilter.sort(comparison);
+    const userSort = devState.userFilter.sort(comparison);
 
-    setUserFilter(userSort);
+    setDevState({
+      ...devState,
+      userFilter: userSort
+    });
   };
- 
+
+  const handleSearch = event => {
+    // Take the item passed into the function
+    const filterValue = event.target.value;
+    const filteredList = devState.users.filter(item => {
+      let values = item.name.first.toLowerCase();
+      return values.indexOf(filterValue.toLowerCase()) !== -1;
+    });
+
+    setDevState({
+      ...devState,
+      userFilter: filteredList
+    });
+  };
+  useEffect(() => {
+    API.getUsers().then(results => {
+      setDevState({
+        ...devState,
+        users: results.data.results,
+        userFilter: results.data.results
+      });
+    });
+  });
+
+  return (
+    <DataContext.Provider value={{ devState, handleSearch, handleSorting }}>
+      <Nav />
+      <div>
+        {devState.userFilter.length > 0}
+
+        <Table />
+      </div>
+    </DataContext.Provider>
+  );
 }
