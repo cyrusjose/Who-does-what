@@ -5,7 +5,7 @@ import DataContext from "../../utils/DataContext";
 import Nav from "../Nav/Nav";
 import Table from "../Table/Table";
 
-const Data = ()=> {
+const DataArea = () => {
   const [devState, setDevState] = useState({
     users: [],
     order: "ascend",
@@ -75,6 +75,7 @@ const Data = ()=> {
       userFilter: filteredList
     });
   };
+
   useEffect(() => {
     API.getUsers().then(results => {
       setDevState({
@@ -83,18 +84,17 @@ const Data = ()=> {
         userFilter: results.data.results
       });
     });
-  });
+  }, []);
 
   return (
     <DataContext.Provider value={{ devState, handleSearch, handleSorting }}>
       <Nav />
-      <div>
-        {devState.userFilter.length > 0}
-
-        <Table />
+      <div className="data-area">
+        {devState.userFilter.length > 0 ? <Table /> : <div></div>}
       </div>
     </DataContext.Provider>
   );
-}
+};
 
-export default Data;
+export default DataArea;
+
