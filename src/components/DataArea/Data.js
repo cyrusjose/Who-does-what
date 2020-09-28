@@ -11,10 +11,11 @@ const DataArea = () => {
     order: "ascend",
     userFilter: [],
     headings: [
-      { name: "Name" },
-      { name: "Phone" },
-      { name: "Email" },
-      { name: "DOB" }
+      { name: "Image", width: "10%" },
+      { name: "Name", width: "10%" },
+      { name: "Phone", width: "20%" },
+      { name: "Email", width: "20%" },
+      { name: "DOB", width: "10%" }
     ]
   });
 
@@ -83,7 +84,7 @@ const DataArea = () => {
         userFilter: results.data.results
       });
     });
-  },);
+  });
 
   return (
     <DataContext.Provider value={{ devState, handleSearch, handleSorting }}>
@@ -96,4 +97,3 @@ const DataArea = () => {
 };
 
 export default DataArea;
-

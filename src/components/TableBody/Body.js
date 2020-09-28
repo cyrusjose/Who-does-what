@@ -20,9 +20,16 @@ export default function Body() {
       {context.devState.userFilter[0] !== undefined &&
       context.devState.userFilter[0].name !== undefined ? (
         context.devState.userFilter.map(
-          ({ login, name, phone, email, dob }) => {
+          ({ login, picture, name, phone, email, dob }) => {
             return (
               <tr key={login.uuid}>
+                <td data-th="Image" className="align-middle">
+                  <img
+                    src={picture.medium}
+                    alt={"profile image for " + name.first + " " + name.last}
+                    className="img-responsive"
+                  />
+                </td>
                 <td data-th="Name" className="name-cell align-middle">
                   {name.first} {name.last}
                 </td>

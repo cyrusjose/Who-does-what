@@ -12,12 +12,12 @@ export default function Table() {
         {/* Table Header */}
         <thead>
           <tr>
-            {context.devState.headings.map(({ name }) => {
+            {context.devState.headings.map(({ name, width }) => {
               return (
                 <th
                   className="col"
                   key={name}
-                  // style={{ width }}
+                  style={{ width }}
                   onClick={() => {
                     context.handleSorting(name.toLowerCase());
                   }}
