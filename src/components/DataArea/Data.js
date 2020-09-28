@@ -78,6 +78,7 @@ const DataArea = () => {
   };
 
   const handleSearch = event => {
+    event.preventDefault();
     // Take the item passed into the function
     const filterValue = event.target.value;
     // eslint-disable-next-line array-callback-return

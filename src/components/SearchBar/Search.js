@@ -14,9 +14,6 @@ export default function Seach() {
           aria-label="Search"
           onChange={e => context.handleSearch(e)}
         />
-        <button className="search px-3" type="submit">
-          Search
-        </button>
       </form>
     </div>
   );
