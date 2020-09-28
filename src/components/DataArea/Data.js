@@ -24,7 +24,7 @@ const DataArea = () => {
       .filter(elem => elem.name === heading)
       .map(elem => elem.order)
       .toString();
-    if (currentOrder === "descend") {
+    if (currentOrder === "ascend") {
       currentOrder = "ascend";
     } else {
       currentOrder = "descend";
