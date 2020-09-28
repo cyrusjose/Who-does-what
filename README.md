@@ -6,6 +6,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This is a simple employee tracker that displays and sorts the employees for the employers.
 
+### Deployed Site
+-https://find-an-employee.netlify.app/
+<img src ="./public/images/main-untouched.png">
+<img src ="./public/images/filtered.png">
+<img src ="./public/images/alphabtic-select.png">
+
 ## Table of Contents
 
  <!--ts-->
