@@ -8,7 +8,7 @@ export default function Seach() {
     <div className="searchbox">
       <form className="searchForm">
         <input
-          className="form-control px-5"
+          className="form-control"
           type="search"
           placeholder="Search First Name"
           aria-label="Search"
