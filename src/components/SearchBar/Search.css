@@ -10,7 +10,7 @@
     box-shadow: 0 0 3px 1px black;
 }
 
-.searchForm, .searchbox{
+.searchForm{
     display: flex;
     align-items: center;
     justify-content: center;
