@@ -6,7 +6,7 @@ export default function Header() {
     <div className="header">
       <h1> Employee Directory</h1>
       <h6>
-        Click on name column header to organize the name column alphabetically
+        Click on headers to reorganize the column
       </h6>
     </div>
   );
