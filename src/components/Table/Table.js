@@ -10,11 +10,11 @@ export default function Table() {
     <div className="datatable mt-5">
       <table
         id="table"
-        className="table table-hover table-condensed"
+        className="table table-condensed"
       >
         {/* Table Header */}
         <thead>
-          <tr className="text-center">
+          <tr className="info text-center">
             {context.devState.headings.map(({ name, width }) => {
               return (
                 <th
@@ -26,7 +26,6 @@ export default function Table() {
                   }}
                 >
                   {name}
-                  <span className="tooltiptext tooltip">Tooltip text</span>
                 </th>
               );
             })}

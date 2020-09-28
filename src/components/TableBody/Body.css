@@ -7,9 +7,18 @@
   border-radius: 50px;
   box-shadow: 0 0 20px 5px black;
   justify-content: center;
-  margin: 10px;
+  margin: 50px;
 }
 .employee {
   display: flex;
   justify-content: center;
+}
+.info{
+  font-size: x-large;
+}
+
+.rowHover:hover{
+  background-color: #fae3d9;
+  border: 0px solid black;
+  box-shadow: 0 0 50px 2px black;
 }

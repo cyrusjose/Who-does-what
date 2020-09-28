@@ -21,7 +21,7 @@ export default function Body() {
         context.devState.userFilter.map(
           ({ login, picture, name, phone, email, dob }) => {
             return (
-              <tr key={login.uuid}>
+              <tr key={login.uuid} className = "rowHover">
                 <td data-th="Image" className="employee">
                   <img
                     src={picture.medium}
@@ -29,18 +29,18 @@ export default function Body() {
                     className="img-responsive empImage"
                   />
                 </td>
-                <td data-th="Name" className="name-cell p-5 text-center">
+                <td data-th="Name" className="info pt-5 name-cell text-center">
                   {name.first} {name.last}
                 </td>
-                <td data-th="Phone" className="p-5 text-center">
+                <td data-th="Phone" className="info pt-5 text-center">
                   {phone}
                 </td>
-                <td data-th="Email" className="p-5 text-center">
+                <td data-th="Email" className="info pt-5 text-center">
                   <a href={"mailto:" + email} target="__blank">
                     {email}
                   </a>
                 </td>
-                <td data-th="DOB" className="p-5 text-center">
+                <td data-th="DOB" className="info pt-5 text-center">
                   {dateFormatting(dob.date)}
                 </td>
               </tr>
