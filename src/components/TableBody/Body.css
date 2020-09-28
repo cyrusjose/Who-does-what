@@ -13,10 +13,9 @@
   justify-content: center;
 }
 .info{
-  font-size: large;
+  font-size: x-large;
   font-weight: bolder;
   text-align: center;
-  padding-top: 100px;
 }
 
 .rowHover:hover{

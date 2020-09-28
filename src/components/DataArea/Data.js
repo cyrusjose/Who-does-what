@@ -11,7 +11,7 @@ const DataArea = () => {
     order: "ascend",
     userFilter: [],
     headings: [
-      { name: "Profile", width: "10%" },
+      { name: "Profile Pic", width: "10%" },
       { name: "Name", width: "10%" },
       { name: "Phone", width: "20%" },
       { name: "Email", width: "20%" },
