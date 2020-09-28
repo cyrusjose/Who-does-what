@@ -24,7 +24,7 @@ export default function Body() {
               <tr key={login.uuid} className = "rowHover">
                 <td data-th="Image" className="employee">
                   <img
-                    src={picture.medium}
+                    src={picture.large}
                     alt={"profile image for " + name.first + " " + name.last}
                     className="img-responsive empImage"
                   />

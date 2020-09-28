@@ -4,7 +4,7 @@
 }
 .empImage {
   border: 1px solid black;
-  border-radius: 50px;
+  border-radius: 100px;
   box-shadow: 0 0 20px 5px black;
   justify-content: center;
   margin: 50px;
