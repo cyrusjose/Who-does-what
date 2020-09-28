@@ -25,9 +25,9 @@ const DataArea = () => {
       .map(elem => elem.order)
       .toString();
     if (currentOrder === "ascend") {
-      currentOrder = "ascend";
-    } else {
       currentOrder = "descend";
+    } else {
+      currentOrder = "ascend";
     }
 
     const comparison = (a, b) => {
