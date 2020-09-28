@@ -1,31 +1,43 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
- # Employee Tracker   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
- ## Description
- This is an employee tracker that displays and sorts the employees for the employers.
- ## Table of Contents
+
+# Employee Tracker [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Description
+
+This is a simple employee tracker that displays and sorts the employees for the employers.
+
+## Table of Contents
+
  <!--ts-->
-  * [Installation](#Installation)
-  * [Usage](#Usage)
-  * [Contributions](#Contributions)
-  * [Tests](#Tests)
-  * [License](#License)
-  * [Questions](#Questions)
- <!--te-->
- ## Installation
- Installation requirement(s) [Add more as necessary]: 
- * react axios
- ## Usage
- run npm install to install all the packages specified in the package.json.
- ## Contributions
- n
- ## Tests
- Here is the code to run a test.
- ```
- npm test
- ```
- ## License
- 
- MIT License
+
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [Tests](#Tests)
+- [License](#License)
+<!--te-->
+
+## Installation
+
+Installation requirements:
+
+- react
+- axios
+
+## Usage
+
+run npm install to install all the packages specified in the package.json.
+
+## Tests
+
+Here is the code to run a test.
+
+```
+npm test
+```
+
+## License
+
+MIT License
 
 Copyright (c) 2020 Cyrus P. Jose
 
@@ -46,7 +58,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
- 
 
 ## Available Scripts
 
@@ -84,4 +95,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
