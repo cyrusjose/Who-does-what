@@ -11,14 +11,15 @@
 .employee {
   display: flex;
   justify-content: center;
+  background-color: #00adb5;
 }
-.info{
+.info {
   font-size: x-large;
   font-weight: bolder;
   text-align: center;
 }
 
-.rowHover:hover{
+.rowHover:hover {
   background-color: #fae3d9;
   box-shadow: 0 0 30px 2px #52616b;
 }
