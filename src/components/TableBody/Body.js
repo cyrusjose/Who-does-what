@@ -29,7 +29,7 @@ export default function Body() {
                     className="img-responsive empImage"
                   />
                 </td>
-                <td data-th="Name" className="info pt-5 name-cell">
+                <td data-th="Name" className="pt-5 name-cell">
                   {name.first} {name.last}
                 </td>
                 <td data-th="Phone" className="info pt-5">
