@@ -1,10 +1,13 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 # Employee Tracker [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 
-This is a simple employee tracker that displays and sorts the employees for the employers.
+- This is a simple employee tracker that displays and sorts the employees for the employers.
+
+- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ### Deployed Site
 -https://find-an-employee.netlify.app/
