@@ -3,22 +3,23 @@
   background-color: #00adb5;
 }
 .empImage {
-  border: 1px solid black;
   border-radius: 100px;
-  box-shadow: 0 0 20px 5px black;
+  box-shadow: 0 0 20px 5px #252a34;
   justify-content: center;
-  margin: 50px;
+  margin: 40px;
 }
 .employee {
   display: flex;
   justify-content: center;
 }
 .info{
-  font-size: x-large;
+  font-size: large;
+  font-weight: bolder;
+  text-align: center;
+  padding-top: 100px;
 }
 
 .rowHover:hover{
   background-color: #fae3d9;
-  border: 0px solid black;
-  box-shadow: 0 0 50px 2px black;
+  box-shadow: 0 0 30px 2px #52616b;
 }
