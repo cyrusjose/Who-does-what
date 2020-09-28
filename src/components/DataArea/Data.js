@@ -8,14 +8,14 @@ import Table from "../Table/Table";
 const DataArea = () => {
   const [devState, setDevState] = useState({
     users: [],
-    order: "descend",
+    order: "ascend",
     userFilter: [],
     headings: [
-      { name: "Profile Picture", width: "10%", order: "descend" },
-      { name: "Name", width: "10%", order: "descend" },
-      { name: "Phone", width: "20%", order: "descend" },
-      { name: "Email", width: "20%", order: "descend" },
-      { name: "DOB", width: "10%", order: "descend" }
+      { name: "Profile Picture", width: "10%", order: "ascend" },
+      { name: "Name", width: "10%", order: "ascend" },
+      { name: "Phone", width: "20%", order: "ascend" },
+      { name: "Email", width: "20%", order: "ascend" },
+      { name: "DOB", width: "10%", order: "ascend" }
     ]
   });
 
