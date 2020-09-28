@@ -1,0 +1,17 @@
+.search{
+    background-color: #00adb5;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 7px;
+}
+.search:hover {
+    background-color: #08d9d6;
+    color:#222831;
+    box-shadow: 0 0 3px 1px black;
+}
+
+.searchForm, .searchbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

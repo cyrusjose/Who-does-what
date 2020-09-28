@@ -11,7 +11,7 @@ const DataArea = () => {
     order: "ascend",
     userFilter: [],
     headings: [
-      { name: "Image", width: "10%" },
+      { name: "Profile", width: "10%" },
       { name: "Name", width: "10%" },
       { name: "Phone", width: "20%" },
       { name: "Email", width: "20%" },
@@ -84,7 +84,8 @@ const DataArea = () => {
         userFilter: results.data.results
       });
     });
-  });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <DataContext.Provider value={{ devState, handleSearch, handleSorting }}>

@@ -1,0 +1,15 @@
+.name-cell {
+  text-transform: capitalize;
+  background-color: #00adb5;
+}
+.empImage {
+  border: 1px solid black;
+  border-radius: 50px;
+  box-shadow: 0 0 20px 5px black;
+  justify-content: center;
+  margin: 10px;
+}
+.employee {
+  display: flex;
+  justify-content: center;
+}

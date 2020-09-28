@@ -23,25 +23,25 @@ export default function Body() {
           ({ login, picture, name, phone, email, dob }) => {
             return (
               <tr key={login.uuid}>
-                <td data-th="Image" className="align-middle">
+                <td data-th="Image" className="employee">
                   <img
                     src={picture.medium}
                     alt={"profile image for " + name.first + " " + name.last}
-                    className="img-responsive"
+                    className="img-responsive empImage"
                   />
                 </td>
-                <td data-th="Name" className="name-cell align-middle">
+                <td data-th="Name" className="name-cell p-5 text-center">
                   {name.first} {name.last}
                 </td>
-                <td data-th="Phone" className="align-middle">
+                <td data-th="Phone" className="p-5 text-center">
                   {phone}
                 </td>
-                <td data-th="Email" className="align-middle">
+                <td data-th="Email" className="p-5 text-center">
                   <a href={"mailto:" + email} target="__blank">
                     {email}
                   </a>
                 </td>
-                <td data-th="DOB" className="align-middle">
+                <td data-th="DOB" className="p-5 text-center">
                   {dateFormatting(dob.date)}
                 </td>
               </tr>

@@ -5,8 +5,8 @@ import DataContext from "../../utils/DataContext";
 export default function Seach() {
   const context = useContext(DataContext);
   return (
-    <div>
-      <form>
+    <div className="searchbox">
+      <form className="searchForm">
         <input
           className="form-control mr-sm-2"
           type="search"
@@ -14,7 +14,9 @@ export default function Seach() {
           aria-label="Search"
           onChange={e => context.handleSearch(e)}
         />
-        <button type="submit">Search</button>
+        <button className="search px-3" type="submit">
+          Search
+        </button>
       </form>
     </div>
   );

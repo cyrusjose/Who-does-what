@@ -7,11 +7,14 @@ export default function Table() {
   const context = useContext(DataContext);
 
   return (
-    <div>
-      <table>
+    <div className="datatable mt-5">
+      <table
+        id="table"
+        className="table table-hover table-condensed"
+      >
         {/* Table Header */}
         <thead>
-          <tr>
+          <tr className="text-center">
             {context.devState.headings.map(({ name, width }) => {
               return (
                 <th
@@ -23,7 +26,7 @@ export default function Table() {
                   }}
                 >
                   {name}
-                  <span className="pointer"></span>
+                  <span className="tooltiptext tooltip">Tooltip text</span>
                 </th>
               );
             })}
