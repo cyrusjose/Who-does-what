@@ -26,6 +26,7 @@ export default function Table() {
                   }}
                 >
                   {name}
+                  <span className="pointer"></span>
                 </th>
               );
             })}

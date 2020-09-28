@@ -10,7 +10,7 @@ export default function Seach() {
         <input
           className="form-control"
           type="search"
-          placeholder="Search First Name"
+          placeholder="Search Name"
           aria-label="Search"
           onChange={e => context.handleSearch(e)}
         />
