@@ -11,27 +11,24 @@ const DataArea = () => {
     order: "ascend",
     userFilter: [],
     headings: [
-      { name: "Profile Picture", width: "10%", order: "ascend" },
-      { name: "Name", width: "10%", order: "ascend" },
-      { name: "Phone", width: "20%", order: "ascend" },
-      { name: "Email", width: "20%", order: "ascend" },
-      { name: "DOB", width: "10%", order: "ascend" }
+      { name: "Profile Picture", width: "10%" },
+      { name: "Name", width: "10%" },
+      { name: "Phone", width: "20%" },
+      { name: "Email", width: "20%" },
+      { name: "DOB", width: "10%" }
     ]
   });
 
   const handleSorting = heading => {
-    let currentOrder = devState.headings
-      .filter(elem => elem.name === heading)
-      .map(elem => elem.order)
-      .toString();
-    if (currentOrder === "ascend") {
-      currentOrder = "descend";
+    if (devState.order === "ascend") {
+      // setOrderState('descend")
+      devState.order = "descend";
     } else {
-      currentOrder = "ascend";
+      devState.order = "ascend";
     }
 
     const comparison = (a, b) => {
-      if (currentOrder === "ascend") {
+      if (devState.order === "ascend") {
         // account for missing values
         if (a[heading] === undefined) {
           return 1;
@@ -66,7 +63,7 @@ const DataArea = () => {
 
     const userSort = devState.userFilter.sort(comparison);
     const headingsUpdate = devState.headings.map(elem => {
-      elem.order = elem.name === heading ? currentOrder : elem.order;
+      elem.order = elem.name === heading ? devState.order : elem.order;
       return elem;
     });
 
